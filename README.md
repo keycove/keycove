@@ -1,17 +1,17 @@
 # Keycove
 
-An easy-to-use API key authorization library.
+Keycove is an easy-to-use API authentication library. Create, verify, and securely store API keys.
 
 The key features are:
 
-- **Generating tokens**: Generates random tokens that can be used as API keys.
+- **Generating api keys**: Generates random tokens that can be used as API keys.
 - **Hashing**: Hash API keys to securely store them in your database.
 - **Encryption / Decryption**: Encrypt API keys to securely store keys. Decrypt to view them again.
 
 Generally, encryption / hashing algorithms work with bytes as inputs and outputs to these algorithms. Keycove takes care of converting values to / from bytes so you only need to work with strings.
 
 
-## Generate a token
+## Generate an api key
 
 ```python
 generate_token(num_bytes: int = 32) -> str
