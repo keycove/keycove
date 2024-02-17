@@ -1,5 +1,7 @@
 # Keycove
 
+An easy-to-use API key authorization library.
+
 The key features are:
 
 - **Generating tokens**: Generates random tokens that can be used as API keys.
