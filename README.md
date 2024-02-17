@@ -29,6 +29,7 @@ str: A random string.
 Example:
 ```python
 >>> from keycove import generate_token
+
 >>> generate_token(num_bytes=16)
 '4LYAecdQvqH_W2OABLsZzV-6-zAAkt23'
 ```
@@ -48,6 +49,7 @@ str: A secret key that can be used with the encrypt and decrypt functions.
 Example:
 ```python
 >>> from keycove import generate_secret_key
+
 >>> generate_secret_key()
 'gAAAAABgTD0yR3O4hV7Kb7PZ6N4iZA3uJNeL3_ZI2QmGJHbLZUj4Cy5B2Pgh4lX3JNLUZ4Q8OvJZ8OZyXUYd8l4XQJZIV64nJA=='
 ```
@@ -79,7 +81,9 @@ ValueError: If secret_key is incorrect.
 Example:
 ```python
 >>>from keycove import encrypt, generate_secret_key
+
 >>> secret_key = generate_secret_key()
+
 >>> encrypt(value_to_encrypt="Hello, World!", secret_key=secret_key)
 'gAAAAABgTD0yR3O4hV7Kb7PZ6N4iZA3uJNeL3_ZI2QmGJHbLZUj4Cy5B2Pgh4lX3JNLUZ4Q8OvJZ8OZyXUYd8l4XQJZIV64nJA=='
 ```
@@ -110,8 +114,10 @@ Keycove is an easy-to-use API key authorization library.
 Example:
 ```python
 >>> from keycove import decrypt, encrypt, generate_secret_key
+
 >>> secret_key = generate_secret_key()
 >>> encrypted_value = encrypt(value_to_encrypt="Hello, World!", secret_key=secret_key)
+
 >>> decrypt(encrypted_value=encrypted_value, secret_key=secret_key)
 'Hello, World!'
 ```
@@ -120,7 +126,7 @@ Example:
 ## Hash
 
 ```python
-hash(plaintext: str) -> str
+hash(value_to_hash: str) -> str
 ```
 This function hashes a given string using the SHA256 algorithm.
  
@@ -133,6 +139,7 @@ str: The hashed string.
 Example:
 ```python
 >>>from keycove import hash
+
 >>> hash(value_to_hash="Hello, World!")
 '2ef7bde608ce5404e97d5f042f95f89f1c232871'
 ```
