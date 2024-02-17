@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="keycove",
-    version="0.3.4",
+    version="0.3.5",
     description="An API authentication library. Create, verify, and securely store API keys.",
     packages=find_packages(),
     install_requires=[
