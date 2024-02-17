@@ -3,12 +3,12 @@ import hashlib
 from cryptography.fernet import Fernet
 
 
-def hash(plaintext: str) -> str:
+def hash(value_to_hash: str) -> str:
     """
     This function hashes a given string using the SHA256 algorithm.
 
     Parameters:
-    plaintext (str): The string to hash.
+    value_to_hash (str): The string to hash.
 
     Returns:
     str: The hashed string.
@@ -18,9 +18,9 @@ def hash(plaintext: str) -> str:
     '2ef7bde608ce5404e97d5f042f95f89f1c232871'
     """
 
-    _validate_type(value=plaintext, arg_name="plaintext", expected_type=str)
+    _validate_type(value=value_to_hash, arg_name="plaintext", expected_type=str)
 
-    hashed_value: str = hashlib.sha256(plaintext.encode()).hexdigest()
+    hashed_value: str = hashlib.sha256(value_to_hash.encode()).hexdigest()
     return hashed_value
 
 
