@@ -2,11 +2,28 @@
 
 Keycove is an easy-to-use API authentication library. Create, verify, and securely store API keys.
 
-The key features are:
+## Table of Contents
 
-- **Generating api keys**: Generates random tokens that can be used as API keys.
+- [Introduction](#keycove)
+- [Features](#features)
+- [Generate an API Key](#generate-an-api-key)
+- [Generate a Secret Key](#generate-a-secret-key)
+- [Example Usage in APIs](#example-usage-in-apis)
+
+## Introduction
+Keycove is an easy-to-use API authentication library. Create, verify, and securely store API keys.
+
+## Features
+The key features are:
+- **Generating API keys**: Generates random tokens that can be used as API keys.
 - **Hashing**: Hash API keys to securely store them in your database.
 - **Encryption / Decryption**: Encrypt API keys to securely store keys. Decrypt to view them again.
+
+## Generate an API Key
+This function generates a random string that can be used as an API key.
+
+## Generate a Secret Key
+This function generates a secret key that is compatible with the encrypt and decrypt functions.
 
 Generally, encryption / hashing algorithms work with bytes as inputs and outputs to these algorithms. Keycove takes care of converting values to / from bytes so you only need to work with strings.
 
@@ -146,3 +163,8 @@ from keycove import hash
 hash(value_to_hash="Hello, World!")
 >>> '2ef7bde608ce5404e97d5f042f95f89f1c232871'
 ```
+
+## Example Usage in APIs
+A simple getting started example of using Keycove in a FastAPI app can be found in the examples folder [here](https://github.com/keycove/keycove/tree/main/examples/simple_getting_started_api_authentication/app/main.py).
+
+More detailed examples of using Keycove in your API to come soon in the [examples folder](https://github.com/keycove/keycove/tree/main/examples).
